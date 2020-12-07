@@ -5,7 +5,7 @@ class Note:
                     note) is not int):
             raise TypeError('Bad types')
 
-        if name == '' or note < 1:
+        if name == '' or note < 2 or note > 6:
             raise ValueError('Bad values')
 
         self.name = name
