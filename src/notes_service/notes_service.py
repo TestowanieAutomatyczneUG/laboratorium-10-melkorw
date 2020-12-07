@@ -11,6 +11,8 @@ class NotesService:
     def average_of(self, name):
         result = self.notes_storage.get_all_notes_of(name)
         wynik = 0
+        if not result:
+            return 'Name does not exist'
         for note in result:
             wynik += note.get_note()
         return wynik/len(result)
